@@ -5,5 +5,10 @@ on: workflow_dispatch
 jobs:
   build:
     runs-on: self-hosted
+    timeout-minutes: 3
+    permissions:
+      contents: read
+      packages: write
+
     steps:
       - run: echo "Hello from self-hosted runner!"
